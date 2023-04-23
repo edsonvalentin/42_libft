@@ -11,9 +11,18 @@
 /* ************************************************************************** */
 
 /* 
-** Function name:  
-** Librairy:
-** Description: 
-** Return value:
-** External functs:
+** Function name: ft_lstadd_front
+** Library: bonus
+** Description: Adds the new node at the beginning of the list.
+** Return value: none
+** External functs: none
 */
+
+void    ft_lstadd_front(t_list **lst, t_list *new)
+{
+    if (lst && new)
+    {
+        new->next = *lst;
+        *lst = new;
+    }
+}

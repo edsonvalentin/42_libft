@@ -11,9 +11,16 @@
 /* ************************************************************************** */
 
 /* 
-** Function name:
-** Librairy:
-** Description: 
-** Return value:
-** External functs:
+** Function name: ft_bzero
+** Library: string.h
+** Description: The bzero() function erases the data in the n bytes of the memory
+**              starting at the location pointed to by s, by writing zeros (bytes
+**              containing '\0') to that area.
+** Return value: none
+** External functs: none
 */
+
+void    ft_bzero(void *dst, size_t n)
+{
+
+}

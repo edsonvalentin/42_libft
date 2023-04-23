@@ -11,9 +11,14 @@
 /* ************************************************************************** */
 
 /* 
-** Function name: 
-** Librairy: 
-** Synopsis:
-** Description: 
-** Return value:
+** Function name: ft_strrchr
+** Library: string.h
+** Description: returns a pointer to the last occurrence of the character c in the **              string s.
+** Return value: the pointer to the matched character or NULL if the character is **               not found.
+** External functs: none
 */
+
+char    *ft_strrchr(const char *s, int c)
+{
+    
+}

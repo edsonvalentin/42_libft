@@ -11,9 +11,24 @@
 /* ************************************************************************** */
 
 /* 
-** Function name: 
-** Librairy: 
-** Synopsis:
-** Description: 
-** Return value:
+** Function name: ft_putnbr_fd
+** Library: none
+** Description: Oututs the integer ’n’ to the given file descriptor.
+** Return value: none
+** External functs: write
 */
+
+void    ft_putnbr_fd(int n, int fd)
+{
+    char    c;
+
+    if (n < 0)
+    {
+        write(fd, "-", 1);
+        n = -n;
+    }
+    if (n > 9)
+        ft_putnbr_fd(n / 10, fd);
+    c = n % 10 + '0';
+    write(fd, &c, 1);
+}

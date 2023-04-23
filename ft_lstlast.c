@@ -11,9 +11,18 @@
 /* ************************************************************************** */
 
 /* 
-** Function name: 
-** Librairy:
-** Description: 
-** Return value:
-** External functs:
+** Function name: ft_lstlast
+** Library: bonus
+** Description: Returns the last node of the list.
+** Return value: The last node of the list.
+** External functs: none
 */
+
+t_list  *ft_lstlast(t_list *lst)
+{
+    if (!lst)
+        return (NULL);
+    while (lst->next)
+        lst = lst->next;
+    return (lst);
+}

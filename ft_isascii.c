@@ -11,11 +11,11 @@
 /* ************************************************************************** */
 
 /* 
-** Function name:
-** Librairy:
-** Description: 
-** Return value:
-** External functs:
+** Function name: ft_isascii
+** Library: ctype.h
+** Description: checks whether c is an ASCII character.
+** Return value: 1 if c is an ASCII character, 0 otherwise.
+** External functs: none
 */
 
 int ft_isascii(int c)

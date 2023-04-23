@@ -11,9 +11,22 @@
 /* ************************************************************************** */
 
 /* 
-** Function name: 
-** Librairy:
-** Description: 
-** Return value:
-** External functs:
+** Function name: ft_lstnew
+** Library: bonus
+** Description: Allocates (with malloc(3)) and returns a new node. The member
+**              variable ’content’ is initialized with the value of the parameter
+**              ’content’. The variable ’next’ is initialized to NULL.
+** Return value: The new node.
+** External functs: malloc
 */
+
+t_list  *ft_lstnew(void *content)
+{
+    t_list  *new;
+
+    if (!(new = malloc(sizeof(t_list))))
+        return (NULL);
+    new->content = content;
+    new->next = NULL;
+    return (new);
+}

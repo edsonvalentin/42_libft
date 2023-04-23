@@ -11,9 +11,22 @@
 /* ************************************************************************** */
 
 /* 
-** Function name:  
-** Librairy:
-** Description: 
-** Return value:
-** External functs:
+** Function name: ft_lstsize
+** Library: bonus
+** Description: Counts the number of nodes in a list.
+** Return value: The length of the list.
+** External functs: none
 */
+
+int ft_lstsize(t_list *lst)
+{
+    int i;
+
+    i = 0;
+    while (lst)
+    {
+        lst = lst->next;
+        i++;
+    }
+    return (i);
+}

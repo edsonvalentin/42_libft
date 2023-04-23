@@ -12,7 +12,7 @@
 
 /* 
 ** Function name: ft_atoi
-** Librairy: libft.h
+** Library: libft.h
 ** Description: convert a string to an integer
 ** Return value: the integer or 0 if the string is not a number
 ** External functs: none
@@ -46,18 +46,11 @@ int	main(int ac, char **av)
 	int	mine;
 	int	theirs;
 	
-	mine = ac;
+	if (ac != 2)
+		return (0);
 	theirs = atoi(av[1]);
 	mine = ft_atoi(av[1]);
 	printf("atoi\t%d\n", theirs);
 	printf("ft_atoi\t%d\n", mine);
-
-	/*if (ac == 2)
-	{
-		theirs = atoi(av[1]);
-		mine = ft_atoi(av[1]);
-		printf("atoi\t%d\n", theirs);
-		printf("ft_atoi\t%d\n", mine);
-	}*/
 	return (0);
 }

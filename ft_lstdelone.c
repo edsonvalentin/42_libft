@@ -11,9 +11,20 @@
 /* ************************************************************************** */
 
 /* 
-** Function name: 
-** Librairy:
-** Description: 
-** Return value:
-** External functs:
+** Function name: ft_lstdelone
+** Library: bonus
+** Description: Takes as a parameter an element and frees the memory of the
+**              node's content using the function ’del’ given as a parameter
+**              and free the node. The memory of ’next’ must not be freed.
+** Return value: none
+** External functs: free
 */
+
+void    ft_lstdelone(t_list *lst, void (*del)(void*))
+{
+    if (lst && del)
+    {
+        del(lst->content);
+        free(lst);
+    }
+}

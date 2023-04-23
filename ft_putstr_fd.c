@@ -11,9 +11,14 @@
 /* ************************************************************************** */
 
 /* 
-** Function name: 
-** Librairy: 
-** Synopsis:
-** Description: 
-** Return value:
+** Function name: ft_putstr_fd
+** Library: none
+** Description: Outputs the string ’s’ to the given file descriptor.
+** Return value: none
+** External functs: write
 */
+
+void    ft_putstr_fd(char *s, int fd)
+{
+    write(fd, s, ft_strlen(s));
+}

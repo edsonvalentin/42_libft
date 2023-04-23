@@ -11,11 +11,11 @@
 /* ************************************************************************** */
 
 /* 
-** Function name: 
-** Librairy:
-** Description: 
-** Return value:
-** External functs:
+** Function name: ft_strlcat
+** Library: string.h
+** Description: function copies up to size - 1 characters from the NUL-termina- **              ted string src to dst, NUL-terminating the result.
+** Return value: return the total length of the string they tried to create.
+** External functs: strlen (ft_strlen)
 */
 
 #include <string.h>

@@ -11,9 +11,14 @@
 /* ************************************************************************** */
 
 /* 
-** Function name:
-** Librairy:
-** Description: 
-** Return value:
-** External functs:
+** Function name: ft_strchr
+** Library: string.h
+** Description: returns a pointer to the first occurrence of the character c in the string s.
+** Return value: the pointer to the matched character or NULL if the character is **               not found.
+** External functs: none
 */
+
+char    *ft_strchr(const char *s, int c)
+{
+
+}

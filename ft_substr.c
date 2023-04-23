@@ -12,7 +12,7 @@
 
 /* 
 ** Function name: ft_substr
-** Librairy: none
+** Library: none
 ** Description: Allocates (with malloc(3)) and returns a substring from 
 **              the string ’s’.
 ** Return value: The substring. NULL if the allocation fails.

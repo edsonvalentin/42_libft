@@ -12,10 +12,10 @@
 
 /* 
 ** Function name: ft_strjoin
-** Librairy: 
-** Synopsis:
-** Description: 
-** Return value:
+** Library: none
+** Description: Alocates (with malloc(3)) and returns a new string, which is the **              result of the concatenation of ’s1’ and ’s2’.
+** Return value: The new string. NULL if the allocation fails.
+** External functs: malloc
 */
 
 char    *ft_strjoin(char const *s1, char const *s2)

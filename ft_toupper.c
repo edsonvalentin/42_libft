@@ -11,11 +11,12 @@
 /* ************************************************************************** */
 
 /* 
-** Function name: 
-** Librairy: 
-** Synopsis:
-** Description: 
-** Return value:
+** Function name: ft_toupper
+** Library: ctype.h
+** Description: convert a lowercase letter to a uppercase letter
+** Return value: if c is a lowercase letter, return the uppercase letter
+**			     else return c
+** External functs: none
 */
 
 int	ft_toupper(int c)

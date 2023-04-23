@@ -11,11 +11,12 @@
 /* ************************************************************************** */
 
 /* 
-** Function name: 
-** Librairy: 
-** Synopsis:
-** Description: 
-** Return value:
+** Function name: ft_tolower
+** Library: ctype.h
+** Description: convert a uppercase letter to a lowercase letter
+** Return value: if c is a uppercase letter, return the lowercase letter
+**			     else return c
+** External functs:
 */
 
 int ft_tolower(int c)
@@ -24,6 +25,7 @@ int ft_tolower(int c)
 		c = c + 32;
 	return (c);
 }
+
 #include <stdio.h>
 #include <ctype.h>
 

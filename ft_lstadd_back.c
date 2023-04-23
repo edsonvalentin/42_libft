@@ -11,9 +11,25 @@
 /* ************************************************************************** */
 
 /* 
-** Function name: 
-** Librairy:
-** Description: 
-** Return value:
-** External functs:
+** Function name: ft_lstadd_back
+** Library: bonus
+** Description: Add the node ’new’ at the end of the list.
+** Return value: none
+** External functs: none
 */
+
+void    ft_lstadd_back(t_list **lst, t_list *new)
+{
+    t_list  *tmp;
+
+    if (lst && new)
+    {
+        if (!*lst)
+            *lst = new;
+        else
+        {
+            tmp = ft_lstlast(*lst);
+            tmp->next = new;
+        }
+    }
+}

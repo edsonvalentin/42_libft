@@ -11,11 +11,12 @@
 /* ************************************************************************** */
 
 /* 
-** Function name: 
-** Librairy:
-** Description: 
-** Return value:
-** External functs:
+** Function name: ft_strlen
+** Library: string.h
+** Description: function calculates the length of the string s, excluding the
+**              terminating null byte ('\0').
+** Return value: the number of bytes in the string pointed to by s.
+** External functs: none
 */
 
 #include <string.h>

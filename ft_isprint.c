@@ -11,11 +11,11 @@
 /* ************************************************************************** */
 
 /* 
-** Function name:
-** Librairy:
-** Description: 
-** Return value:
-** External functs:
+** Function name: ft_isprint
+** Library: ctype.h
+** Description: checks for any printable character including space.
+** Return value: 1 if c is a printable character, 0 otherwise.
+** External functs: none
 */
 
 int	ft_isprint(int c)

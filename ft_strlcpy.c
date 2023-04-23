@@ -11,11 +11,13 @@
 /* ************************************************************************** */
 
 /* 
-** Function name: 
-** Librairy:
-** Description: 
-** Return value:
-** External functs:
+** Function name: ft_strlcpy
+** Library: string.h
+** Description: copies up to size - 1 characters from the NUL-terminated string
+**              src to dst, NUL-terminating the result.
+** Return value: return the total length of the string they tried to create. That
+**               means the length of src.
+** External functs: none
 */
 
 #include <string.h>

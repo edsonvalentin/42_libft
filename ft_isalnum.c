@@ -11,11 +11,11 @@
 /* ************************************************************************** */
 
 /* 
-** Function name:
-** Librairy:
-** Description: 
-** Return value:
-** External functs:
+** Function name: ft_isalnum
+** Library: ctype.h
+** Description: checks for an alphanumeric character.
+** Return value: 1 if c is a letter or a digit, 0 otherwise.
+** External functs: none
 */
 
 int ft_isalnum(int c)

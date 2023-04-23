@@ -11,9 +11,14 @@
 /* ************************************************************************** */
 
 /* 
-** Function name: 
-** Librairy: 
-** Synopsis:
-** Description: 
-** Return value:
+** Function name: ft_putchar_fd
+** Library: none
+** Description: Outputs the character ’c’ to the given file descriptor.
+** Return value: none
+** External functs: write
 */
+
+void    ft_putchar_fd(char c, int fd)
+{
+    write(fd, &c, 1);
+}

@@ -11,11 +11,12 @@
 /* ************************************************************************** */
 
 /* 
-** Function name:
-** Librairy:
-** Description: 
-** Return value:
-** External functs:
+** Function name: ft_isdigit
+** Library: ctype.h
+** Description: checks for a digit (0 through 9).
+** Return value: zero if the character tests false and returns non-zero if the
+**               character tests true.
+** External functs: none
 */
 
 int ft_isdigit(int c)

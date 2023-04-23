@@ -11,11 +11,11 @@
 /* ************************************************************************** */
 
 /* 
-** Function name:
-** Librairy:
-** Description: 
-** Return value:
-** External functs:
+** Function name: ft_isalpha
+** Library: ctype.h
+** Description: checks for an alphabetic character; in the standard "C" locale
+** Return value: non-zero if c is an alphabetic character, zero otherwise
+** External functs: none
 */
 
 int	ft_isalpha(int c)

@@ -11,9 +11,15 @@
 /* ************************************************************************** */
 
 /* 
-** Function name: 
-** Librairy: 
-** Synopsis:
-** Description: 
-** Return value:
+** Function name: ft_itoa
+** Library: none
+** Description: Allocates (with malloc(3)) and returns a string representing the
+**              integer received as an argument. Negative numbers must be handled.
+** Return value: The string representing the integer. NULL if the allocation fails.
+** External functs: malloc
 */
+
+char    *ft_itoa(int n)
+{
+    
+}

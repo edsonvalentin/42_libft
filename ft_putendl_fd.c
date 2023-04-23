@@ -11,9 +11,15 @@
 /* ************************************************************************** */
 
 /* 
-** Function name: 
-** Librairy: 
-** Synopsis:
-** Description: 
-** Return value:
+** Function name: ft_putendl_fd
+** Library: none
+** Description: Outputs the string ’s’ to the given file descriptor, followed by a **              newline.
+** Return value: none
+** External functs: write
 */
+
+void    ft_putendl_fd(char *s, int fd)
+{
+    write(fd, s, ft_strlen(s));
+    write(fd, "\n", 1);
+}
