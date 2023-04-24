@@ -18,6 +18,8 @@
 ** External functs: none
 */
 
+#include "Libft.h"
+
 int	ft_isprint(int c)
 {
 	if (c < 32 || c > 126)

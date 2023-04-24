@@ -18,7 +18,7 @@
 ** External functs: strlen (ft_strlen)
 */
 
-#include <string.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {

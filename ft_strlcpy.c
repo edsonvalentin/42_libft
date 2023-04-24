@@ -20,7 +20,7 @@
 ** External functs: none
 */
 
-#include <string.h>
+#include "Libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
