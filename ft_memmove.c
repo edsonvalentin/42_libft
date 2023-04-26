@@ -22,9 +22,24 @@
 ** External functs: none
 */
 
-#include "libft.h"
+#include <stdio.h>
+#include <string.h>
+
+//#include "libft.h"
 
 void    *memmove(void *dest, const void *src, size_t n)
 {
 
+}
+
+int main ()
+{
+   const char dest[] = "oldstring";
+   const char src[]  = "newstring";
+
+   printf("Before memmove dest = %s, src = %s\n", dest, src);
+   memmove(dest, src, 9);
+   printf("After memmove dest = %s, src = %s\n", dest, src);
+
+   return(0);
 }
