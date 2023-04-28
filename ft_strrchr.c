@@ -18,9 +18,37 @@
 ** External functs: none
 */
 
-#include "libft.h"
+#include <stdio.h>
+#include <string.h>
+//#include "libft.h"
 
 char    *ft_strrchr(const char *s, int c)
 {
+    int	i;
     
+    i = 0;
+    while (s[i] != '\0')
+    	i++;
+    while (i > 0)
+    {
+    	if (s[i] == c)
+    		return ((char *)s + i);
+    	i--;
+    }
+    return (0);
+}
+
+int main(void)
+{
+	char str[] = "abacate";
+	char *o;
+	char *p;
+	
+	o = strrchr(str, 'c');
+	p = ft_strrchr(str, 'c');
+	printf("Original %c\n", *o);
+	printf("Original %c\n", *(o + 1));
+	printf("Prototipo %c\n", *p);
+	printf("Prototipo %c\n", *(p + 1));
+	return (0);
 }
