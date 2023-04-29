@@ -23,9 +23,37 @@
 ** External functs: none
 */
 
-#include "libft.h"
+#include <stdio.h>
+#include <string.h>
+//#include "libft.h"
 
-char	*strnstr(const char *big, const char *little, size_t len);
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
+	size_t	i;
+	size_t	j;
 	
+	i = 0;
+	if (little[0] == '\0')
+		return((char *)big);
+	while (big[i] != '\0' && i < len)
+		{
+			j = 0;
+			while (big[i + j] == little[j] && little[j] != '\0' && i + j < len)
+			{
+				if (little[j + 1] == '\0')
+					return((char *)big + i);
+				j++;
+			}
+			i++;
+		}
+	return(0);
+}
+
+int	main(void)
+{
+	char	str[] = "O mundo magico de wall disney.";
+	char	substr[] = "";
+	
+	printf("%s\n", ft_strnstr(str, substr, 11));
+	return(0);
 }

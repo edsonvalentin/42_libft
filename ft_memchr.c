@@ -18,9 +18,35 @@
 ** External functs: none
 */
 
-#include "libft.h"
+#include <stdio.h>
+#include <string.h>
+//#include "libft.h"
 
-int ft_strncmp(const char *s1, const char *s2, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
+	size_t	i;
+	
+	i = 0; 
+	while (i < n)
+	{
+		if (((unsigned char *)s)[i] == (unsigned char)c)
+			return((void *)s + i);
+		i++;
+	}
+	return(0);
+}
 
+int	main(void)
+{
+	char data[] = {'q', 'r', 's', 't', 'p', 'a', 'x'};
+	char *pos = ft_memchr(data, 'a', 7);
+	
+	if (pos == 0)
+		printf("Char not found\n");
+	else
+	{
+		printf("pos[0] = %c\n",pos[0]);
+		printf("pos[1] = %c\n",pos[1]);
+	}
+	return(0);
 }

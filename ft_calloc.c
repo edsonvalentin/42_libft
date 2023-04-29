@@ -22,11 +22,48 @@
 **              an error.
 ** Return value: a pointer to the allocated memory, or NULL if the request fails.
 ** External functs: malloc
+** Notes: the function can be simplified with bzero or memset
 */
 
-#include "libft.h"
+#include <stdio.h>
+#include <stdlib.h>
+//#include "libft.h"
 
 void    *ft_calloc(size_t nmemb, size_t size)
 {
+	void	*ptr;
+	size_t	i;
+	
+	i = 0;
+	ptr = malloc(nmemb * size);
+	if (ptr == NULL)
+		return (NULL);
+	while (i < nmemb * size)
+	{
+		*((char *)ptr + i) = 0;
+		i++;
+	}
+	return(ptr);
+}
 
+int main() {
+	int	*arr;
+    int	n = 5;
+    size_t	size;
+    
+    size = sizeof(int) * n;
+    arr = ft_calloc(n, sizeof(int));
+    if (arr == NULL) {
+        printf("Erro ao alocar memória.\n");
+        return 1;
+    }
+
+    printf("Array:\n");
+    for (int i = 0; i < n; i++) {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+
+    free(arr);
+    return 0;
 }
