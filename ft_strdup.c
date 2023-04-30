@@ -22,16 +22,13 @@
 ** External functs: malloc
 */
 
-#include <string.h>
-#include <stdio.h>
-#include <stdlib.h>
-//#include "libft.h"
+#include "libft.h"
 
 char	*ft_strdup(const char *s)
 {
 	char	*ptr;
-	int	i;
-	
+	int		i;
+
 	i = 0;
 	while (s[i])
 		i++;
@@ -45,15 +42,5 @@ char	*ft_strdup(const char *s)
 		i++;
 	}
 	ptr[i] = '\0';
-	return(ptr);
-}
-
-int	main(void)
-{
-	char	str1[20] = "teste";
-	char	*str2;
-	
-	str2 = ft_strdup(str1);
-	printf("Copia para str2 %s", str2);
-	return(0);
+	return (ptr);
 }

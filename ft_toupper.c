@@ -25,27 +25,5 @@ int	ft_toupper(int c)
 {
 	if (c >= 97 && c <= 122)
 		c = c - 32;
-	return (c); 
-}
-
-#include <stdio.h>
-#include <ctype.h>
-
-int	main (void)
-{
-	char	c;
- 
-	c = 'r'; 
-	printf("C %c\t\t\n", toupper(c));
-	printf("Mine %c\t\t\n", ft_toupper(c));
-	c = 'i'; 
-	printf("C %c\t\t\n", toupper(c));
-	printf("Mine %c\t\t\n", ft_toupper(c));
-	c = '*'; 
-	printf("C %c\t\t\n", toupper(c));
-	printf("Mine %c\t\t\n", ft_toupper(c));
-	c = 'G'; 
-	printf("C %c\t\t\n", toupper(c));
-	printf("Mine %c\t\t\n", ft_toupper(c));
-	return (0);
+	return (c);
 }

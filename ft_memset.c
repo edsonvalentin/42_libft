@@ -19,39 +19,21 @@
 ** External functs: none
 */
 
-#include <ctype.h>
-#include <stddef.h>
-//#include "libft.h"
+#include "libft.h"
 
-void *ft_memset(void *str, int c, size_t n)
+void	*ft_memset(void *str, int c, size_t n)
 {
-	size_t count;
-	unsigned char *ptr;
-	
+	size_t			count;
+	unsigned char	*ptr;
+	unsigned char	uc;
+
 	count = 0;
-	ptr = (unsigned char*)str;
-	while (count <= (n - 1))
+	uc = (unsigned char)c;
+	ptr = (unsigned char *)str;
+	while (count < n)
 	{
-		ptr[count] = c;
+		ptr[count] = uc;
 		count++;
 	}
-	return str;
-}
-
-#include <stdio.h>
-#include <string.h>
-
-int	main () {
-	char str[50];
-
-	strcpy(str,"This is string.h library function");
-	puts(str);
-
-	memset(str,'$',7);
-	puts(str);
-
-	ft_memset(str,'$',7);
-	puts(str);
-
-	return(0);
+	return (str);
 }

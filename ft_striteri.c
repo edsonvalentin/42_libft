@@ -13,23 +13,16 @@
 /* 
 ** Function name: ft_striteri
 ** Library: none
-** Description: Applies the function ’f’ to each character of the string passed as
-**              argument, passing its index as first argument. Each character is
-**              passed by address to ’f’ to be modified if necessary.
+** Description: Applies the function ’f’ to each character of the string 
+**				passed as argument, passing its index as first argument. Each
+**				character is passed by address to ’f’ to be modified if
+**				necessary.
 ** Return value: none
 ** External functs: none
 */
 
 #include "libft.h"
 
-void    ft_striteri(char *s, void (*f)(unsigned int, char *))
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-    unsigned int    i;
-
-    i = 0;
-    while (s[i])
-    {
-        f(i, &s[i]);
-        i++;
-    }
 }

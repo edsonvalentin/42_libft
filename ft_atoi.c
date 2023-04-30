@@ -24,9 +24,10 @@ int	ft_atoi(const char *str)
 {
 	int	num;
 	int	sign;
-	
+
+	num = 0;
 	sign = 1;
-	while (*str == 32 || (*str >= 8 && *str <= 13))
+	while (*str == 32 || (*str >= 9 && *str <= 13))
 		str++;
 	if (*str == '-')
 		sign *= -1;
@@ -34,25 +35,8 @@ int	ft_atoi(const char *str)
 		str++;
 	while (*str >= '0' && *str <= '9')
 	{
-		num = (*str - '0') + (num * 10);
+		num = num * 10 + (*str - '0');
 		str++;
 	}
 	return (num * sign);
-}
-
-#include <stdio.h>
-#include <stdlib.h>
-
-int	main(int ac, char **av)
-{
-	int	mine;
-	int	theirs;
-	
-	if (ac != 2)
-		return (0);
-	theirs = atoi(av[1]);
-	mine = ft_atoi(av[1]);
-	printf("atoi\t%d\n", theirs);
-	printf("ft_atoi\t%d\n", mine);
-	return (0);
 }

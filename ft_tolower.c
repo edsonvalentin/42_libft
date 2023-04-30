@@ -21,31 +21,9 @@
 
 #include "libft.h"
 
-int ft_tolower(int c)
+int	ft_tolower(int c)
 {
 	if (c >= 65 && c <= 90)
 		c = c + 32;
 	return (c);
-}
-
-#include <stdio.h>
-#include <ctype.h>
-
-int	main (void)
-{
-	char	c;
- 
-	c = 'A'; 
-	printf("C %c\t\t\n", tolower(c));
-	printf("Mine %c\t\t\n", ft_tolower(c));
-	c = 'M'; 
-	printf("C %c\t\t\n", tolower(c));
-	printf("Mine %c\t\t\n", ft_tolower(c));
-	c = '/'; 
-	printf("C %c\t\t\n", tolower(c));
-	printf("Mine %c\t\t\n", ft_tolower(c));
-	c = 'f'; 
-	printf("C %c\t\t\n", tolower(c));
-	printf("Mine %c\t\t\n", ft_tolower(c));
-	return (0);
 }

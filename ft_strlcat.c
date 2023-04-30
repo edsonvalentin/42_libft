@@ -13,22 +13,13 @@
 /* 
 ** Function name: ft_strlcat
 ** Library: string.h
-** Description: function copies up to size - 1 characters from the NUL-termina- **              ted string src to dst, NUL-terminating the result.
+** Description: function copies up to size - 1 characters from the NUL-termina-
+**              ted string src to dst, NUL-terminating the result.
 ** Return value: return the total length of the string they tried to create.
 ** External functs: strlen (ft_strlen)
 */
 
 #include "libft.h"
-
-size_t	ft_strlen(const char *s)
-{
-	size_t	i;
-	
-	i = 0;
-	while (s[i] != '\0')
-		i++;
-	return (i);
-}
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
@@ -47,27 +38,4 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	}
 	dst[c] = '\0';
 	return (ft_strlen(dst) + ft_strlen(&src[d]));
-
-}
-
-#include <stdio.h>
-#include <stdlib.h>
-
-int	main(void)
-{
-	char	*src;
-	char	*dest;
-	char	*ft_dest;
-
-	src = "stuv";
-	dest = "abcdefghijklmnopr";
-	ft_dest = "abcdefghijklmnopr";
-	printf("%s, %s, %zu", src, dest, ft_strlcat(dest, src, 4));
-	//ft_strlcat(dest, ft_dest, src, 1);
-	//ft_strlcat(dest, ft_dest, src, 4);
-	//ft_strlcat(dest, ft_dest, src, 10);
-	//src = "ghijkl";
-	//ft_strlcat_test(dest, ft_dest, src, 8);
-	//ft_strlcat_test(dest, ft_dest, src, 10);
-	return (0);
 }

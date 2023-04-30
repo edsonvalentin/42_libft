@@ -22,45 +22,32 @@
 ** External functs: none
 */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
-//#include "libft.h"
-
-void    *ft_memmove(void *dest, const void *src, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	char	*d;
+	char		*d;
 	const char	*s;
-	size_t	i;
-	
+	size_t		i;
+
 	i = 0;
 	d = dest;
 	s = src;
 	if (d < s)
+	{
 		while (n >= i)
 		{
 			d[i] = s[i];
 			i++;
 		}
+	}
 	else
+	{
 		while (n >= i)
 		{
-			d[n-i] = s[n-i];
+			d[n - i] = s[n - i];
 			i++;
 		}
+	}
 	return (dest);
-}
-
-int main (void)
-{
-	char	src[] = "Hello, world!";
-	char	dest[] = "----------";
-	
-	size_t n = strlen(src) + 1;
-	printf("Before memmove dest = %s, src = %s\n", dest, src);
-	ft_memmove(dest + 5, src, n);
-	//memmove(d, s, 6);
-	printf("After memmove dest = %s, src = %s\n", dest, src);
-
-   return(0);
 }
