@@ -19,7 +19,8 @@ SRCS =	ft_calloc.c      ft_atoi.c         ft_isprint.c    ft_strlen.c\
 		ft_isalpha.c     ft_isdigit.c      ft_isalnum.c    ft_isascii.c\
 		ft_strlcpy.c     ft_strlcat.c      ft_toupper.c    ft_tolower.c\
 		ft_bzero.c       ft_memcpy.c       ft_memmove.c\
-		ft_memchr.c      ft_memcmp.c       ft_memset.c      ft_strdup.c\
+		ft_memchr.c      ft_memcmp.c       ft_memset.c     ft_strdup.c\
+		ft_strjoin.c	 ft_substr.c	   ft_strtrim.c\
 
 SRCS_O	:= ${SRCS:.c=.o}
 BONUS_O	:= ${BONUS:.c=.o}
@@ -38,11 +39,6 @@ ${NAME}: ${SRCS_O}
 	echo 'Mandatory part is ready'
 
 all: ${NAME}
-
-bonus:	${BONUS_O}
-		${CL} ${NAME} ${BONUS_O}
-		${RL} ${NAME}
-		echo 'Bonus part is ready'
 
 clean:
 	${RM} ${OBJS}

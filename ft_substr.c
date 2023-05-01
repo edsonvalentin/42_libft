@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_str.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: evalenti <evalenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -11,12 +11,12 @@
 /* ************************************************************************** */
 
 /* 
-** Function name: ft_substr
+** Function name: ft_str
 ** Library: none
-** Description: Allocates (with malloc(3)) and returns a substring from 
-**              the string ’s’. The substring begins at index ’start’ and is
+** Description: Allocates (with malloc(3)) and returns a string from 
+**              the string ’s’. The string begins at index ’start’ and is
 **              of maximum size ’len’.
-** Return value: The substring. NULL if the allocation fails.
+** Return value: The string. NULL if the allocation fails.
 ** External functs: malloc
 ** Notes: used libft functions: ft_strlen and ft_strdup
 */
@@ -25,24 +25,23 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*substr;
-	size_t	slen;
+	char	*str;
 	size_t	i;
+	size_t	size;
 
+	if (!s)
+		return (NULL);
 	i = 0;
-	slen = ft_strlen(s);
-	if (s == NULL)
+	size = ft_strlen(s);
+	if (start > size)
+		return (ft_strdup(""));
+	if (len > size)
+		len = size;
+	str = (char *)malloc (sizeof(char) * (len + 1));
+	if (!str)
 		return (NULL);
-	if (start >= slen)
-		return (strdup(""));
-	substr = (char *)malloc (sizeof(char) * (len + 1));
-	if (!substr)
-		return (NULL);
-	while (s[start + i] != '\0' && i < len)
-	{
-		substr[i] = s[start + i];
-		i++;
-	}
-	substr[i] = '\0';
-	return (substr);
+	while (s[i] != '\0' && i < len)
+		str[i++] = s[start++];
+	str[i] = '\0';
+	return (str);
 }
