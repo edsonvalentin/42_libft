@@ -18,6 +18,7 @@
 **              end of the string.
 ** Return value: The trimmed string. NULL if the allocation fails.
 ** External functs: malloc
+** Notes: It was use libft functions: ft_strlen, ft_strchr and ft_substr.
 */
 
 #include "libft.h"
