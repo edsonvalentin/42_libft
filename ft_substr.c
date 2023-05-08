@@ -35,8 +35,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size = ft_strlen(s);
 	if (start > size)
 		return (ft_strdup(""));
-	if (len > size)
-		len = size;
+	if (len > size - start)
+		len = size - start;
 	str = (char *)malloc (sizeof(char) * (len + 1));
 	if (!str)
 		return (NULL);
