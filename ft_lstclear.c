@@ -18,10 +18,25 @@
 **              to the list must be set to NULL.
 ** Return value: none
 ** External functs: free
+** Note: Use ft_lstdelone to delete the content of the node.
 */
 
 #include "libft.h"
 
 void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
+	t_list	*current;
+	t_list	*aux;
+
+	if (lst && del)
+	{
+		current = *lst;
+		while (current)
+		{
+			aux = current->next;
+			ft_lstdelone(current, del);
+			current = aux;
+		}
+		*lst = NULL;
+	}
 }

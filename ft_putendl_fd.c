@@ -16,13 +16,14 @@
 ** Description: Outputs the string ’s’ to the given file descriptor,
 **				followed by a newline.
 ** Return value: none
-** External functs: write
+** External functs: none
+** Note: Uses libft functions: ft_putstr_fd and ft_putchar_fd.
 */
 
 #include "libft.h"
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	write(fd, s, ft_strlen(s));
-	write(fd, "\n", 1);
+	ft_putstr_fd(s, fd);
+	ft_putchar_fd('\n', fd);
 }

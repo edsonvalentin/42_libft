@@ -28,26 +28,20 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	char		*d;
 	const char	*s;
-	size_t		i;
 
-	i = 0;
 	d = dest;
 	s = src;
-	if (d < s)
+	if (d == s)
+		return (dest);
+	else if (d > s)
 	{
-		while (n >= i)
+		while (n > 0)
 		{
-			d[i] = s[i];
-			i++;
+			d[n - 1] = s[n - 1];
+			n--;
 		}
 	}
 	else
-	{
-		while (n >= i)
-		{
-			d[n - i] = s[n - i];
-			i++;
-		}
-	}
+		ft_memcpy(dest, src, n);
 	return (dest);
 }
